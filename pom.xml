@@ -81,6 +81,28 @@
 						</exclude>
 					</excludes>
 				</configuration>
+<plugin>
+    <groupId>org.jacoco</groupId>
+    <artifactId>jacoco-maven-plugin</artifactId>
+    <version>0.8.10</version>
+    <executions>
+        <!-- Anexa o agente JaCoCo para capturar a cobertura -->
+        <execution>
+            <goals>
+                <goal>prepare-agent</goal>
+            </goals>
+        </execution>
+
+        <!-- Gera o relatório automaticamente após os testes -->
+        <execution>
+            <id>report</id>
+            <phase>test</phase>
+            <goals>
+                <goal>report</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
 			</plugin>
 			
 		</plugins>
