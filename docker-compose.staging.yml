@@ -10,7 +10,7 @@ services:
       - db-volume:/var/lib/postgresql/data
 
   api:
-    image: fukuigv/pratica_3_ac2:latest
+    image: fukuigv/ac2_ca:latest
     networks:
       - default  # Certifique-se de que está usando a rede adequada
     environment:
